@@ -1,0 +1,566 @@
+    /* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141428;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+}
+
+section {
+    height: 95vh;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    color: white;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+h1, h2 {
+    color: white;
+}
+
+button {
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+a {
+    color: #2B6AB9;
+    text-decoration: none;
+    transition: 0.05s;
+    font-weight: 600;
+  }
+  
+  a:hover {
+    color: #2B6AB9;
+  }
+  
+
+/* HEADER */
+header {
+    width: 100%;
+    background-color: #0F0F23;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.top .container {
+    max-width: 900px;
+    padding: 2vh;
+}
+
+ header .container .fa-solid {
+    font-size: 18px;
+    display: flex;
+    margin: 15px;
+  }
+
+  header .container .fa-solid:hover {
+      color: #2B6AB9;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 1px;
+    margin-left: 32px;
+    font-weight: 400;
+  }
+
+  .nav-list li a {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 900px) {
+    body  {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0vh;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+
+
+
+/* ABOVE THE FOLD */
+.atf-section {
+    max-width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atf-section .container {
+    max-width: 100%;
+}
+
+.atf-titulo p {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.atf-titulo h1 {
+    font-size: 70px;
+    margin: 0px;
+}
+
+#period {
+    color: #2B6AB9;
+}
+
+.atf-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 728px;
+}
+
+.atf-buttons {
+    display: flex;
+}
+
+.atf-section button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 300px;
+}
+
+.atf-section button a {
+    color: white;
+    font-weight: 300;
+}
+
+.atf-buttons .curriculo {
+    background-color: #2B6AB9;
+    color: #E5E5E5;
+    border: 1px solid #3D2C94;
+}
+
+.atf-buttons .curriculo:hover {
+    background-color: #2B6AB9;
+    opacity: 90%;
+}
+
+button i {
+    font-size: 16px;
+    color: white;
+    margin: 0 5px;
+}
+
+.atf-buttons .contato {
+    background-color: transparent;
+    color: #E5E5E5;
+    border: 1px solid #E5E5E5;
+}
+
+.atf-buttons .contato:hover {
+    background-color: #343434;
+}
+
+
+
+
+/* SOBRE */
+.sobre-section {
+    background-color: #141428;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-section .container {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.sobre-image {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.sobre-image img {
+    max-width: 60%;
+    height: auto;
+}
+
+.sobre-content {
+    max-width: 50%;
+}
+
+
+
+
+/* HABILIDADES */
+.habilidades-section {
+    background-color: #080808;
+    height: 100vh;
+}
+
+.habilidades-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habilidades-section .container {
+    height: 750px;
+    max-width: 900px;
+}
+
+.habilidades-titulo {
+    text-align: center;
+}
+
+.habilidade {
+    background-color: #121212;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.3);
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    width: 250px;
+    padding: 0 30px 15px;
+}
+
+.habilidade-box {
+    margin: auto;
+}
+
+.habilidade-box p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.habilidade-content {
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.habilidade-content h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #B2B2B2;
+}
+
+.habilidade-content .fa-brands {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #B2B2B2;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 22px;
+    padding: 7px;
+    background-color: #080808;
+    display: flex;
+    border-radius: 12px;
+}
+
+.progress {
+    background-color: #3D2C94;
+    border-radius: 6.78px;
+}
+
+.progress-html {
+    width: 50%;
+}
+
+.progress-css {
+    width: 50%;
+}
+
+.progress-javascript {
+    width: 50%;
+}
+
+.progress-vuejs {
+    width: 50%;
+}
+
+.progress-react {
+    width: 50%;
+}
+
+.progress-figma {
+    width: 50%;
+}
+
+
+
+/* EXPERIÊNCIA */
+
+
+.experiencia-section .container 
+{
+    max-width: 800px;
+    height: 750px;
+}
+
+.experiencia-titulo {
+    text-align: center;
+}
+
+details {
+    display: block;
+    width: 100%;
+    min-width: 300px;
+    outline: none;
+    margin: 0 auto;
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+    max-width: 900px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+summary {
+    background-color: transparent;
+    border: 1px solid #3D2C94;
+    color: #E5E5E5;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+summary:hover {
+    background-color: #3D2C94;
+}
+
+details summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+details summary::after {
+    content: "+";
+    font-size: 30px;
+}
+
+details p {
+    margin: 0;
+    padding: 30px;
+    background-color: #080808;
+}
+
+details[open] p {
+    background-color: #080808;
+}
+
+details[open] {
+    max-height: 500px;
+}
+
+details[open] summary {
+    background-color: #3D2C94;
+}
+
+details[open] summary::after {
+    content: "-";
+    font-size: 30px;
+}
+
+
+
+
+/* CONTATO */
+.contato-section .container {
+    display: flex;
+    flex-direction: row;
+    margin: 120px auto;
+    max-width: 750px;
+}
+
+.contato-box {
+    display: block;
+    width: 50%;
+    padding-right: 3em;
+}
+
+.contato-section .contato-box div {
+    width: 100%;
+}
+
+.contato-form {
+    padding: 0;
+    width: 50%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-titulo {
+    margin: 0;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+}
+
+.contato-form form input[type=submit] {
+    background-color: #3D2C94;
+    border-radius: 8px;
+}
+
+.contato-form form input, textarea {
+    font-size: 1em;
+    padding: 10px;
+    color: white;
+    background-color: #121212;
+    border: 1px solid #343434;
+    outline: none;
+}
+
+.contato-form form input::placeholder, textarea::placeholder {
+    color: #5C5C5C;
+}
+
+.contato-form form input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    resize: none;
+}
+
+footer .container {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.contato-links {
+    display: block;
+    width: 100%;
+}
+
+.contato-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.contato-content, .contato-links {
+    margin-top: 30px;
+}
+
+.contato-item:hover {
+    color: #B2B2B2;
+}
+
+.contato-item i {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.contato-item i:hover {
+    color: #B2B2B2;
+}
