@@ -1,0 +1,148 @@
+/* 
+Global
+=========================
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  color: #372B2B;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1, h3 {
+  text-transform: capitalize;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+Título
+=========================
+*/
+.titulo {
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* 
+Botões
+=========================
+*/
+.botoes-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+button {
+  background-color: white;
+  color: #A70B0B;
+  border: 1px solid #A70B0B;
+  padding: 5px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+button:hover, button:focus {
+  background-color: #A70B0B;
+  color: white;
+  cursor: pointer;
+}
+
+/* 
+Cardápio
+=========================
+*/
+.cardapio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.cardapio-item {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(100%/2 - 30px);
+  margin: 10px;
+  border: 1px solid #F6DE26;
+}
+
+.cardapio-item img {
+  width: 50%;
+  height:fit-content;
+}
+
+.item-info {
+  width: 50%;
+  padding: 15px;
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px ;
+}
+
+.item.preco {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95vw;
+  }
+
+  .cardapio-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardapio-item {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100%/3 - 50px);
+  }
+
+  .cardapio-item img {
+    width: 100%;
+    height:fit-content;
+  }
+  
+  .item-info {
+    width: 100%;
+  }
+
+  .item-preco {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cardapio-item {
+    max-width: calc(100%/2 - 50px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardapio-item {
+    max-width: calc(100% - 80px);
+  }
+}

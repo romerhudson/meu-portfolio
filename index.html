@@ -5,46 +5,44 @@
   <!-- meta -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, mininum-scale=1.0">
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet"> 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,400;0,700;1,600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet"> 
 
   <!-- icons -->
   <script src="https://kit.fontawesome.com/c48784d431.js" crossorigin="anonymous"></script>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./navbar/navbar-style.css">
 
   <title>Romer Hudson</title>
 </head>
 
 <body>
 
-  <header id="top" class="top">
-    <div class="container">
-      <nav>
+  <header>
+    <nav>
+        <!-- home icon -->
         <i class="fa-solid fa-house"></i>
-        <!-- <a class="logo" href="/">Tiger Codes</a> -->
+        <!-- mobile menu -->
         <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
+        <!-- nav-bar -->
         <ul class="nav-list">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#contato">Contato</a></li>
+            <li><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li><a class="nav-link" href="#projetos">Projetos</a></li>
+            <li><a class="nav-link" href="#experiencia">Experiência</a></li>
+            <li><a class="nav-link" href="#contato">Contato</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
+    </nav>
+</header>
 
   <main>
 
@@ -61,7 +59,7 @@
         <div class="atf-buttons">
           <button class="curriculo">
             <i class="fa-solid fa-download"></i>
-            Baixar currículo em PDF
+            <a href="./assets/curriculo.pdf" download="curriculo.pdf" type="application/pdf">Baixar currículo em PDF</a>
           </button>
           <button class="contato">
             <i class="fa-solid fa-angles-down"></i>
@@ -72,113 +70,89 @@
       </div>
     </section>
     
-    <!-- Sobre -->
-    <section id="sobre" class="sobre-section">
+    <!-- Sobre mim -->
+    <section id="sobre" class="sobre-mim-section">
 
       <div class="container">
-        
-        <div class="sobre-image">
-          <img src="./assets/vanilla-languages.png" alt="profile-picture">
-        </div>
 
-        <div class="sobre-content">
-          <h2>Sobre o site</h2>
+        <div class="sobre-mim-content">
+          <h2>Sobre mim</h2>
           <p>
-            O layout do site foi criado no Adobe Illustrator e depois desenvolvido em HTML, CSS e Javascript usando o conceito <i>Mobile First</i>.
+            Trabalho como designer gráfico freelancer para pagar as contas, toco violão pra liberar serotonina e estudo programação pra me realizar profissionalmente.
           </p>
           <p>
-            O repositório do projeto está <a href="https://github.com/romerhudson/portfolio">hospedado no github</a> e a versão do meu currículo em PDF pode ser baixada <a>clicando aqui</a>.
+            Me descobri recentemente nessa área e busco minha primeira oportunidade de trabalho como desenvolvedor front-end.
           </p>
+        </div>
+        
+        <div class="sobre-mim-image">
+          <img src="./assets/foto-de-perfil.png" alt="profile-picture">
         </div>
         
       </div>
 
     </section>
 
-    <!-- Habilidades --> 
-    <!-- <section id="habilidades" class="habilidades-section">
-      
+    <!-- Sobre o site -->
+    <section id="sobre-site" class="sobre-site-section">
+
       <div class="container">
-        <div class="habilidades-titulo">
-          <h2>Minhas Habilidades</h2>
-        </div>
 
-        <div class="habilidades-content">
+        <h2>Sobre o Site</h2>
+        <p>O layout do site foi criado no Adobe Illustrator e depois desenvolvido em HTML, CSS e Javascript usando linguagens puras.</p>
+        <p>O repositório do projeto está <a href="https://github.com/romerhudson/portfolio">hospedado no github</a> e a versão do meu currículo em PDF pode ser baixada <a href="./assets/curriculo.pdf" download="curriculo.pdf" type="application/pdf">clicando aqui</a>.</p>
+        <p>Nos cards abaixo está um breve resumo de como essas linguagens foram utilizadas no projeto.</p>
 
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-html5"></i>
-                <h4>HTML</h4>
-              </div>
-              <div class="progress-bar">
-                <div class="progress progress-html"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-css3-alt"></i>
-                <h4>CSS</h4>
-              </div>
-              <div class="progress-bar">
-                <div class="progress progress-css"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-js"></i>
-                <h4>JavaScript</h4>
-                </div>
-              <div class="progress-bar">
-                <div class="progress progress-javascript"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-vuejs"></i>
-                <h4>Vue.js</h4>
-              </div>
-              <div class="progress-bar">
-                <div class="progress progress-vuejs"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-react"></i>
-                <h4>React</h4>
-              </div>
-              <div class="progress-bar">
-                <div class="progress progress-react"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="habilidade">
-            <div class="habilidade-box">
-              <div class="habilidade-content">
-                <i class="fa-brands fa-figma"></i>
-                <h4>Figma</h4>
-              </div>
-              <div class="progress-bar">
-                <div class="progress progress-figma"></div>
-              </div>
-            </div>
-          </div>
+        <div class="sobre-site-content">
+          <article class="linguagem" id="html">
+            <h3 class="linguagem-title">HTML</h3>
+            <p class="linguagem-text">
+              Partindo dos conceitos de boa semântica, acessibilidade e clareza do código, apliquei as melhores práticas em HTML para arquitetar o projeto.
+            </p>
+          </article>
+          <article class="linguagem" id="css">
+            <h3 class="linguagem-title">CSS</h3>
+            <p class="linguagem-text">
+              Em conjunto com o HTML, o CSS deu "cara" à identidade visual do projeto. O modelo Flexbox foi empregado para organizar os elementos, enquanto as @media rules viabilizaram a responsividade do site.
+            </p>
+          </article>
+          <article class="linguagem" id="javascript">
+            <h3 class="linguagem-title">JavaScript</h3>
+            <p class="linguagem-text">
+              O JavaScript foi fundamental para criar uma navbar responsiva com o burger icon e para criar o portfolio da seção 'Projetos'.
+            </p>
+          </article>
         </div>
       </div>
-    </section> -->
+
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projetos-section">
+      <div class="container">
+        <h2>Projetos</h2>
+
+        <div class="projetos-content">
+
+          <div class="projeto-box">
+            <img src="./assets/projeto-1.jpg" alt="">
+            <div class="projeto-box-text">
+              <h3>Cardápio digital</h3>
+              <p>Nesse projeto eu criei um cardápio digital usando métodos de manipulação de array como map, reduce e filter e interagindo com o DOM através de escutadores de evento e outras propriedades.</p>
+              <a href="./cardapio/cardapio.html" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="projeto-box" id="em-construcao">
+            <span>EM BREVE</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
 
     <!-- Experiência -->
     <section id="experiencia" class="experiencia-section">
@@ -188,25 +162,33 @@
         </div>
       
         <details>
-          <summary>Experiência 1</summary>
-          <p>Lorem ipsum...</p>
+          <summary>Desinger gráfico - Freelancer</summary>
+          <p class="experiencia-periodo">Período: 2021 - atual</p>
+          <p class="experiencia-descricao">Responsável pela negociação e controle de aproximadamente 1.000 fretes por mês de medicamentos de alto custo.</p>
         </details>
 
         <details>
-          <summary>Experiência 2</summary>
-          <p>Lorem ipsum...</p>
+          <summary>Operador de Logística - Hera Medicamentos</summary>
+          <p class="experiencia-periodo">Período: 2018 - 2021</p>
+          <p class="experiencia-descricao">Responsável pela negociação e controle de aproximadamente 1.000 fretes por mês de medicamentos de alto custo.</p>
         </details>
 
         <details>
-          <summary>Experiência 3</summary>
-          <p>Lorem ipsum...</p>
+          <summary>Web Designer - NavegueFeliz</summary>
+          <p class="experiencia-periodo">Período: 2013 - 2015</p>
+          <p class="experiencia-descricao">A NavegueFeliz foi um pequeno empreendimento liderado por mim e um amigo e que atuava no ramo de web design, criando soluções de comunicação digital para micro e pequenas empresas. Lá oferecíamos, além da criação de um site, um plano de captação de clientes e relacionamento com o público via ferramentas online, como Wordpress, Facebook, entre outras.</p>
+        </details>
+
+        <details>
+          <summary>Gerente Operacional - Premiauto</summary>
+          <p class="experiencia-periodo">Período: 2016 - 2017</p>
+          <p class="experiencia-descricao">A Premiauto, uma empresa que oferece proteção veicular - um serviço similar ao seguro de automóveis -, foi criada no final de 2015, pouco antes de eu ser contratado como Supervisor. Lá eu gerenciava o setor de sinistros, a relação com fornecedores e parceiros, além de outras funções secundárias. Por ser uma empresa recém aberta e com poucos funcionários, tive a oportunidade de participar da criação de praticamente todos os processos do negócio, do comercial ao financeiro, passando pela comunicação e administrativo. No ano de 2017, apesar do aumento do faturamento e número de clientes, a empresa entrou em crise e foi vendida.</p>
         </details>
 
       </div>
     </section>
   
   </main>
-
 
     <!-- Contato -->
   <footer id="contato" class="contato-section">
@@ -218,42 +200,37 @@
           <h2 class="contato-titulo">Me mande uma mensagem</h2>
         </div>
 
-        <div class="contato-content">
-          <p>Ou clique em um dos links abaixo:</p>
-        </div>
-
         <div class="contato-links">
 
           <div class="contato-item">
-            <i class="fa-brands fa-linkedin"></i>
-            <p>/romer-hudson</p>
+            <a href="https://www.linkedin.com/in/romer-hudson/" class="contato-link">
+              <i class="fa-brands fa-linkedin"></i>
+              <p>LinkedIn</p>
+            </a>
           </div>
 
           <div class="contato-item">
-            <i class="fa-solid fa-square-envelope"></i>
-            <p>romervhudson@gmail.com</p>
-          </div>
-
-          <div class="contato-item">
-            <i class="fa-solid fa-square-phone"></i>
-            <p>+55 31 98725-2248</p>
+            <a href="https://wa.me/5531987252248" class="contato-link">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p>WhatsApp</p>
+            </a>
           </div>
         </div>
       </div>
       
       <div class="contato-form">
-        <form action="#">
+        <form action="https://formsubmit.co/romervhudson@gmail.com" method="POST">
 
           <div class="input-box">
-            <input type="text" placeholder="Digite o seu nome" required>
+            <input type="text" name="name" placeholder="Digite o seu nome" required>
           </div>
 
           <div class="input-box">
-            <input type="email" placeholder="Digite o seu e-mail" required>
+            <input type="email" name="email" placeholder="Digite o seu e-mail" required>
           </div>
 
           <div class="user-message">
-            <textarea type="text" placeholder="Digite sua mensagem" rows="5" required></textarea>
+            <textarea type="text" name="message" placeholder="Digite sua mensagem" rows="5" required></textarea>
           </div>
 
           <div class="contato-button">
@@ -267,7 +244,7 @@
 
   </footer>
 
-  <script src="mobile-navbar.js"></script>
+  <script src="./navbar/mobile-navbar.js"></script>
 
 </body>
 
